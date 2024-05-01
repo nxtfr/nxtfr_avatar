@@ -9,7 +9,7 @@
    ]},
   {env, [
     {autodiscovery_group, avatars},
-    {storage_module, nxtfr_avatar_riak},
+    {storage_module, nxtfr_avatar_mnesia},
     {riak_options, [{host, "127.0.0.1"}, {port, 8087}]}
   ]},
   {modules, [
