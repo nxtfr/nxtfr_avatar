@@ -63,6 +63,7 @@ restore(Uid) ->
 
 -spec init([]) -> {ok, state()}.
 init([]) ->
+    application:start(nxtfr_event),
     {ok, AutoDiscoveryGroup} = application:get_env(nxtfr_avatar, autodiscovery_group),
     {ok, StorageModule} = application:get_env(storage_module),
     nxtfr_event:notify({join_autodiscovery_group, AutoDiscoveryGroup}),
