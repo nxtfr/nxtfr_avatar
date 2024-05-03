@@ -28,7 +28,6 @@ init() ->
             mnesia:create_table(?AVATARS_TABLE, [
                 {record_name, avatar},
                 {attributes, record_info(fields, avatar)},
-                {index, [email]},
                 {disc_only_copies, [node()]}])
     end,
     {ok, []}.
