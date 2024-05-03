@@ -10,6 +10,7 @@
 -export([start/0, start/2, stop/1]).
 
 start() ->
+    application:start(sasl),
     application:start(nxtfr_event),
     application:start(nxtfr_autodiscovery),
     application:start(nxtfr_avatar).
